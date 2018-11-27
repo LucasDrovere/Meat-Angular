@@ -3,8 +3,7 @@ import { CartItem } from 'app/restaurant-detail/shopping-cart/shopping-cart.mode
 
 @Component({
   selector: 'mt-order-items',
-  templateUrl: './order-items.component.html',
-  styleUrls: ['./order-items.component.css']
+  templateUrl: './order-items.component.html'
 })
 export class OrderItemsComponent implements OnInit {
 
