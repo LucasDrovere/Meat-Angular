@@ -26,4 +26,12 @@ export class InputComponent implements OnInit, AfterContentInit {
       throw new Error('Esse componente precisa ser usado com uma diretiva ngModel')
     }
   }
+
+  hasSucess(): boolean{
+    return this.input.valid && (this.input.dirty || this.input.touched)
+  }
+
+  hasError(): boolean{
+    return this.input.invalid && (this.input.dirty || this.input.touched)
+  }
 }

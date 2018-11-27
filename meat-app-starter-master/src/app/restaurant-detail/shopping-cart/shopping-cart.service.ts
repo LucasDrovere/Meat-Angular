@@ -26,7 +26,7 @@ export class ShoppingCartService{
 
         //Se tiver vai incrementar a quantidade desse item no carrinho
         if(foundItem){
-            foundItem.quantity = foundItem.quantity + 1
+            this.increaseQty(foundItem)
             //Se não adiciona o item no carrinho
         }else{
             this.items.push(new CartItem(item))
@@ -37,4 +37,19 @@ export class ShoppingCartService{
     removeItem(item: CartItem){
         this.items.splice(this.items.indexOf(item), 1)
     }
+
+    //incrementa a quantidade do item existente na pagina de finalizar o pedido
+    increaseQty(item: CartItem){
+        item.quantity = item.quantity + 1
+    }
+
+    //decrementa a quantidade do item existente na pagina de finalizar o pedido
+    decreaseQty(item: CartItem){
+        item.quantity = item.quantity - 1
+        if (item.quantity === 0){
+            this.removeItem(item)
+        }
+    }
+
+
 }

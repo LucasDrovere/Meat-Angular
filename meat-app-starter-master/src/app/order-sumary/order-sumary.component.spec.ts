@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputComponent } from './input.component';
+import { OrderSumaryComponent } from './order-sumary.component';
 
-describe('InputComponent', () => {
-  let component: InputComponent;
-  let fixture: ComponentFixture<InputComponent>;
+describe('OrderSumaryComponent', () => {
+  let component: OrderSumaryComponent;
+  let fixture: ComponentFixture<OrderSumaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputComponent ]
+      declarations: [ OrderSumaryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputComponent);
+    fixture = TestBed.createComponent(OrderSumaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
